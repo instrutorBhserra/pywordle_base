@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css?v=2" />
+
+		<link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+		<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+		<title>PyWordle</title>
+	</head>
+	<body>
+		<h1>PyWordle</h1>
+
+		<!--Main stack-->
+		<div id="mainStack" class="entryStack"></div>
+
+		<!--Win screen-->
+		<div id="winScreen" class="hidden">
+			<div>
+				<h2></h2>
+				<div id="winMsg">
+					Joguei pyWordle.<br />
+					Jogue também:
+				</div>
+				<button id="btnCopy">Copiar</button>
+			</div>
+		</div>
+
+		<!--Templates-->
+		<template id="inputTemplate">
+			<input type="text" maxlength="1" onfocus="this.select()" >
+		</template>
+		<template id="btnTemplate">
+			<button type="submit">&gt;</button>
+		</template>
+
+		<!--Python Script-->
+		<py-script src="routes.py"> </py-script>
+		<py-script src="script.py?v=14"> </py-script>
+	</body>
+</html>
